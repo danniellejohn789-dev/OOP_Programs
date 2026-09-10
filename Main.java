@@ -8,47 +8,57 @@ public class Main{
 
 	public static void main(String[] args){
 
+		tm.add(m1);
 		tm.add(new taskEmployee(2, 500, 0, "dei", "", ""));
 
 		System.out.print("Enter ID: ");
 		int id = sml.nextInt();
+		sml.nextLine();
 
 		taskEmployee employee = search(tm, id);
 
-		ui();
-		System.out.print(": ");
-		int ano = sml.nextInt();
-		sml.nextLine();
+		while (true){
+			ui();
+			System.out.print(": ");
+			String ano = sml.nextLine();
 
-		switch(ano){
+			switch(ano){
 
-			case 1:
-				employee.setStatus(sml);
-				break;
+				case "\\i":
+					employee.showBasic();
+					break;
 
-			case 2:
-				System.out.print("\nEnter your task: ");
-				String task = sml.nextLine();
+				case "\\s":
+					employee.displayInfo();
+					break;
 
-				employee.setTask(task);
-				break;
+				case "1":
+					employee.setStatus(sml);
+					break;
 
-			case 3:
-				System.out.println("\nEnter your hours of work: ");
-				int hours = sml.nextInt();
+				case "2":
+					System.out.print("\nEnter your task: ");
+					String task = sml.nextLine();
 
-				employee.sethours(hours);
-				break;
+					employee.setTask(task);
+					break;
 
-			case 4:
-				System.out.println("\nEXITING.....");
-				return;
+				case "3":
+					System.out.println("\nEnter your hours of work: ");
+					int hours = sml.nextInt();
+					sml.nextLine();
 
-			default:
-				System.out.println("\nERROR!!");
+					employee.sethours(hours);
+					break;
+
+				case "\\q":
+					System.out.println("\nEXITING.....");
+					return;
+
+				default:
+					System.out.println("\nERROR!!");
+			}
 		}
-
-
 
 
 
@@ -56,13 +66,15 @@ public class Main{
 
 	public static void ui(){
 		System.out.println("""
-				===============
+				\n===============
 				CLOCKING SYSTEM
 				===============
+				[\\i] Display Info
+				[\\s] 
 				[1] Set Status
 				[2] Task
 				[3] Hours of work
-				[4] Exit""");
+				[\\q] Exit""");
 	}
 
 

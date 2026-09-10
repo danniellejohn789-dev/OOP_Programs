@@ -49,8 +49,8 @@ public class Employee{
 	//methods
 	
 	public void displayInfo(){
-		System.out.println("Employee ID: " + getID());
+		System.out.println("\nEmployee ID: " + getID());
 		System.out.println("Name: " + getName());
-		System.out.println("Salary: " + getSalary()  + "\n");
+		System.out.println("Salary: " + getSalary());
 	}
 }

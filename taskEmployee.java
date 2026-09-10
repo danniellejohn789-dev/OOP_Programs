@@ -69,7 +69,7 @@ public class taskEmployee extends Employee{
     @Override
     public void displayInfo(){
         System.out.printf("""
-                =====EMPLOYEE=====
+                \n=====EMPLOYEE=====
                 ID: %d
                 Name: %s
                 Salary: %d 
@@ -82,5 +82,9 @@ public class taskEmployee extends Employee{
     public void complete(){
 		this.taskStatus = "COMPLETED!!";
 	}
+
+    public void showBasic(){
+        super.displayInfo();
+    }
 
 }
