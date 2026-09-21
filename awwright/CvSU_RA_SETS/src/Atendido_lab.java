@@ -8,9 +8,11 @@ public class Atendido_lab {
 
         Atendido_lab AUB = new Atendido_lab();
 
-        for (int q = 0; q < B.elements.size(); q++){
-
+        for (int q = 0; q < this.elements.size(); q++){
             AUB.elements.add(this.elements.get(q));
+        }
+
+        for (int q = 0; q < B.elements.size(); q++){
 
             if (!this.elements.contains(B.elements.get(q))){
                 AUB.elements.add(B.elements.get(q));
