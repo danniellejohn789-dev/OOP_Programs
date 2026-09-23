@@ -1,5 +1,0 @@
-javac Card.java
-javac Deck.java
-javac Hand.java
-javac Blackjack.java
-java Blackjack
