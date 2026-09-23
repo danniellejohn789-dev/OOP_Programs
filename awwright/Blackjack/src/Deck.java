@@ -1,11 +1,17 @@
 import java.util.*;
 
+/*
+ Atendido, John Dannielle V.
+ 251017156
+ BSCS 2-7
+*/
+
 public class Deck {
     ArrayList<Card> cards = new ArrayList<>();
     
     Deck(){
-        for(String suit : Card.RANKS){
-            for(String rank : Card.SUITS){
+        for(String suit : Card.SUITS){
+            for(String rank : Card.RANKS){
                 Card newCard = new Card(suit, rank);
                 cards.add(newCard);
             }
@@ -24,7 +30,8 @@ public class Deck {
     }
 
     Deck put(Card card){
-
+        this.cards.add(card);
+        return this;
     }
 
     public String toString(){
